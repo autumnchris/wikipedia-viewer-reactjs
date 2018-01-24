@@ -1,0 +1,19 @@
+{
+  "name": "wikipedia-viewer-react",
+  "version": "1.0.0",
+  "description": "My project for the Build a Wikipedia Viewer challenge as part of the curriculum for the Front End Development Certification on Free Code Camp. Built with React.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/autumnchris/wikipedia-viewer-react.git"
+  },
+  "author": "autumnchris",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/autumnchris/wikipedia-viewer-react/issues"
+  },
+  "homepage": "https://github.com/autumnchris/wikipedia-viewer-react#readme"
+}
