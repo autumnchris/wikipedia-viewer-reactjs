@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/autumnchris/wikipedia-viewer-react/issues"
   },
-  "homepage": "https://github.com/autumnchris/wikipedia-viewer-react#readme"
+  "homepage": "https://github.com/autumnchris/wikipedia-viewer-react#readme",
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  }
 }
