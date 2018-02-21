@@ -4,6 +4,7 @@
   "description": "My project for the Build a Wikipedia Viewer challenge as part of the curriculum for the Front End Development Certification on Free Code Camp. Built with React.",
   "main": "index.js",
   "scripts": {
+    "start": "webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,6 +18,7 @@
   },
   "homepage": "https://github.com/autumnchris/wikipedia-viewer-react#readme",
   "dependencies": {
+    "axios": "^0.17.1",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
