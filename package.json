@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/autumnchris/wikipedia-viewer-react/issues"
   },
-  "homepage": "https://github.com/autumnchris/wikipedia-viewer-react#readme",
+  "homepage": "https://autumnchris.github.io/wikipedia-viewer-react",
   "dependencies": {
     "axios": "^0.18.0",
     "babel-core": "^6.26.0",
