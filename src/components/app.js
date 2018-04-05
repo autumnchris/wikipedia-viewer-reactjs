@@ -23,9 +23,11 @@ export default class App extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
+    document.querySelector('.spinner').style.display = 'block';
     axios.get(`https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${this.state.searchInput}&origin=*&format=json`)
     .then((wikiData) => {
       this.setState({ searchResults: wikiData.data.query.search });
+      document.querySelector('.spinner').style.display = 'none';
 
       if (this.state.searchResults.length === 0) {
         this.setState({
@@ -38,6 +40,7 @@ export default class App extends Component {
       }
     }).catch((error) => {
       this.setState({ errorMessage: ' Unable to load Wikipedia search results.' });
+      document.querySelector('.spinner').style.display = 'none';
       document.querySelector('.alert').style.display = 'block';
     });
   }
@@ -59,6 +62,10 @@ export default class App extends Component {
             </div>
           </form>
           <p className="text-center">...or read a <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">random Wikipedia article</a></p>
+          <div className="text-center spinner">
+            <span className="fa fa-refresh fa-spin fa-fw"></span>
+            <span className="sr-only">Loading...</span>
+          </div>
           <ResultsList results={this.state.searchResults} />
           <div className="alert alert-warning text-center"><span className="fa fa-warning fa-lg fa-fw"></span>{this.state.errorMessage}</div>
         </main>
