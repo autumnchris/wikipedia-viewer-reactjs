@@ -2,3 +2,26 @@ $dark-gray: #333;
 $med-gray: #404040;
 $white: #fff;
 $blue: #1ad1ff;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  body {
+    background-color: $dark-gray;
+    color: $white;
+    letter-spacing: 1px;
+    min-height: 100%;
+    padding-bottom: 60px;
+    position: relative;
+    a,
+    a:visited,
+    a:hover,
+    a:active,
+    a:focus {
+      color: $blue;
+    }
+  }
+}
