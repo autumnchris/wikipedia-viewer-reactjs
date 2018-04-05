@@ -19,6 +19,7 @@ export default class App extends Component {
               <input type="search" className="form-control search-input" aria-label="Search for a Wikipedia article..." placeholder="Search for a Wikipedia article..." required />
             </div>
           </form>
+          <p className="text-center">...or read a <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">random Wikipedia article</a></p>
         </main>
         <footer className="text-center">Coded by <a href="../portfolio" target="_blank">Autumn Bullard</a></footer>
       </div>
