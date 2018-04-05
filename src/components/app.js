@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ResultsList from './results-list';
 import axios from 'axios';
 
 export default class App extends Component {
@@ -45,6 +46,7 @@ export default class App extends Component {
             </div>
           </form>
           <p className="text-center">...or read a <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">random Wikipedia article</a></p>
+          <ResultsList results={this.state.searchResults} />
         </main>
         <footer className="text-center">Coded by <a href="../portfolio" target="_blank">Autumn Bullard</a></footer>
       </div>
