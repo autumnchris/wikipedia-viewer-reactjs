@@ -73,6 +73,10 @@ html {
         margin-top: 2px;
       }
     }
+    .alert {
+      display: none;
+      margin: 8%;
+    }
     footer {
       background-color: $med-gray;
       bottom: 0;

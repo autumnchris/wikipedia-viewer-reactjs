@@ -8,7 +8,8 @@ export default class App extends Component {
     super(props);
     this.state = {
       searchInput: '',
-      searchResults: []
+      searchResults: [],
+      errorMessage: ''
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -25,7 +26,9 @@ export default class App extends Component {
     axios.get(`https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${this.state.searchInput}&origin=*&format=json`)
     .then((wikiData) => {
       this.setState({ searchResults: wikiData.data.query.search });
-      console.log(wikiData);
+    }).catch((error) => {
+      this.setState({ errorMessage: ' Unable to load Wikipedia search results.' });
+      document.querySelector('.alert').style.display = 'block';
     });
   }
 
@@ -47,6 +50,7 @@ export default class App extends Component {
           </form>
           <p className="text-center">...or read a <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">random Wikipedia article</a></p>
           <ResultsList results={this.state.searchResults} />
+          <div className="alert alert-warning text-center"><span className="fa fa-warning fa-lg fa-fw"></span>{this.state.errorMessage}</div>
         </main>
         <footer className="text-center">Coded by <a href="../portfolio" target="_blank">Autumn Bullard</a></footer>
       </div>
