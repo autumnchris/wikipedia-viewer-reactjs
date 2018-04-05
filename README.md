@@ -7,3 +7,7 @@ My project for the [Build a Wikipedia Viewer challenge](https://www.freecodecamp
 ## User Stories
 1. I can search Wikipedia entries in a search box and see the resulting Wikipedia entries.
 2. I can click a button to see a random Wikipedia entry.
+
+## Demo
+
+View project demo at [https://autumnchris.github.io/wikipedia-viewer-reat](https://autumnchris.github.io/wikipedia-viewer-reat).
