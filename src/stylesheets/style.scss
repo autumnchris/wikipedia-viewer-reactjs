@@ -56,6 +56,23 @@ html {
         padding-left: 35px;
       }
     }
+    .well {
+      background-color: #404040;
+      border: none;
+      line-height: 22px;
+      margin-top: 20px;
+      max-width: 650px;
+      padding: 20px;
+      h2 {
+        font-family: $wiki-font;
+        font-size: 2.4rem;
+        @media only screen and (min-width: $desktop-view) {
+          font-size: 2.6rem;
+        }
+        letter-spacing: 3px;
+        margin-top: 2px;
+      }
+    }
     footer {
       background-color: $med-gray;
       bottom: 0;
