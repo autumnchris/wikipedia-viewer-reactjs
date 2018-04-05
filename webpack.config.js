@@ -23,7 +23,7 @@ module.exports = {
         test: /\.(ttf|otf|eot|woff|woff2)$/,
         loader: 'url-loader',
         options: {
-          limit: 50000,
+          limit: 1000000,
         }
       },
       {
