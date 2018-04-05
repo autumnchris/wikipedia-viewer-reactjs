@@ -11,3 +11,14 @@ My project for the [Build a Wikipedia Viewer challenge](https://www.freecodecamp
 ## Demo
 
 View project demo at [https://autumnchris.github.io/wikipedia-viewer-reat](https://autumnchris.github.io/wikipedia-viewer-reat).
+
+## Installation
+
+```
+$ git clone https://github.com/autumnchris/wikipedia-viewer-react.git
+$ cd wikipedia-viewer-react
+$ npm install
+$ npm start
+```
+
+Go to `http://localhost:8080`.
