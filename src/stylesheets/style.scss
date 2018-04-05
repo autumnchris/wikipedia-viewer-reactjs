@@ -43,6 +43,19 @@ html {
         }
       }
     }
+    form {
+      max-width: 500px;
+      padding: 10px;
+      .fa-search {
+        color: $dark-gray;
+        left: 2px;
+        top: 9px;
+      }
+      .search-input {
+        border-radius: 30px;
+        padding-left: 35px;
+      }
+    }
     footer {
       background-color: $med-gray;
       bottom: 0;
