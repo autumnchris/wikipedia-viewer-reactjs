@@ -26,6 +26,16 @@ export default class App extends Component {
     axios.get(`https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${this.state.searchInput}&origin=*&format=json`)
     .then((wikiData) => {
       this.setState({ searchResults: wikiData.data.query.search });
+
+      if (this.state.searchResults.length === 0) {
+        this.setState({
+          errorMessage: ` Unable to find results for \"${this.state.searchInput}\". Consider revising your search.`
+        });
+        document.querySelector('.alert').style.display = 'block';
+      }
+      else {
+        document.querySelector('.alert').style.display = 'none';
+      }
     }).catch((error) => {
       this.setState({ errorMessage: ' Unable to load Wikipedia search results.' });
       document.querySelector('.alert').style.display = 'block';
