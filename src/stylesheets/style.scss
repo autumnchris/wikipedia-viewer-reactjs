@@ -32,6 +32,17 @@ html {
     a:focus {
       color: $blue;
     }
+    header {
+      margin-bottom: 10%;
+      h1 {
+        font-family: $wiki-font;
+        font-size: 2rem;
+        font-variant: small-caps;
+        @media only screen and (min-width: $desktop-view) {
+          font-size: 2.4rem;
+        }
+      }
+    }
     footer {
       background-color: $med-gray;
       bottom: 0;
