@@ -3,10 +3,10 @@
   src: url(.././fonts/linux-libertine.ttf);
 }
 
-$dark-gray: #333;
-$med-gray: #404040;
+$gray: #333;
 $white: #fff;
 $blue: #1ad1ff;
+$glassy-bg: rgba(13, 13, 13, 0.2);
 
 $wiki-font: "Linux Libertine", serif;
 
@@ -19,7 +19,8 @@ $desktop-view: 700px;
 html {
   height: 100%;
   body {
-    background-color: $dark-gray;
+    background: $gray;
+    background: linear-gradient(120deg, #262626, #4d4d4d) fixed;
     color: $white;
     letter-spacing: 1px;
     min-height: 100%;
@@ -47,7 +48,7 @@ html {
       max-width: 500px;
       padding: 10px;
       .fa-search {
-        color: $dark-gray;
+        color: $gray;
         left: 2px;
         top: 9px;
       }
@@ -62,8 +63,9 @@ html {
       margin: 3%;
     }
     .well {
-      background-color: #404040;
+      background-color: $glassy-bg;
       border: none;
+      border-radius: 0;
       line-height: 22px;
       margin-top: 20px;
       max-width: 650px;
@@ -83,7 +85,7 @@ html {
       margin: 8%;
     }
     footer {
-      background-color: $med-gray;
+      background-color: $glassy-bg;
       bottom: 0;
       font-size: 1.2rem;
       left: 0;
