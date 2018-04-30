@@ -55,10 +55,10 @@ export default class App extends Component {
           <div className="text-center">
             <span className="fa fa-wikipedia-w fa-4x"></span>
           </div>
-          <form className="center-block" role="search" onSubmit={this.handleSubmit}>
+          <form className="center-block" role="search" onSubmit={(event) => this.handleSubmit(event)}>
             <div className="form-group has-feedback">
               <span className="fa fa-search form-control-feedback"></span>
-              <input type="search" className="form-control search-input" aria-label="Search for a Wikipedia article..." placeholder="Search for a Wikipedia article..." onChange={this.handleChange} value={this.state.searchInput} required />
+              <input type="search" className="form-control search-input" aria-label="Search for a Wikipedia article..." placeholder="Search for a Wikipedia article..." onChange={(event) => this.handleChange(event)} value={this.state.searchInput} required />
             </div>
           </form>
           <p className="text-center">...or read a <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">random Wikipedia article</a></p>
