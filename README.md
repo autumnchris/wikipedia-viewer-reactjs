@@ -15,7 +15,6 @@ My project for the [Build a Wikipedia Viewer challenge](https://www.freecodecamp
 * [axios](https://github.com/axios/axios)
 * [Media Wiki API](https://www.mediawiki.org/wiki/API:Main_page)
 * [Babel](https://babeljs.io)
-* [Bootstrap](https://getbootstrap.com)
 * [Font Awesome](https://fontawesome.com)
 * [Linux Libertine font](https://www.dafont.com/linux-libertine.font)
 

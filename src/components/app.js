@@ -33,43 +33,40 @@ export default class App extends Component {
         this.setState({
           errorMessage: ` Unable to find results for \"${this.state.searchInput}\". Consider revising your search.`
         });
-        document.querySelector('.alert').style.display = 'block';
+        document.querySelector('.error-message').style.display = 'block';
       }
       else {
-        document.querySelector('.alert').style.display = 'none';
+        document.querySelector('.error-message').style.display = 'none';
       }
     }).catch((error) => {
       this.setState({ errorMessage: ' Unable to load Wikipedia search results.' });
       document.querySelector('.spinner').style.display = 'none';
-      document.querySelector('.alert').style.display = 'block';
+      document.querySelector('.error-message').style.display = 'block';
     });
   }
 
   render() {
     return (
-      <div className="container-fluid">
-        <header className="text-left">
+      <div className="body">
+        <header>
           <h1>Wikipedia Viewer</h1>
         </header>
         <main>
-          <div className="text-center">
-            <span className="fa fa-wikipedia-w fa-4x"></span>
-          </div>
-          <form className="center-block" role="search" onSubmit={(event) => this.handleSubmit(event)}>
-            <div className="form-group has-feedback">
-              <span className="fa fa-search form-control-feedback"></span>
-              <input type="search" className="form-control search-input" aria-label="Search for a Wikipedia article..." placeholder="Search for a Wikipedia article..." onChange={(event) => this.handleChange(event)} value={this.state.searchInput} required />
+          <div className="fab fa-wikipedia-w fa-4x"></div>
+          <form role="search" onSubmit={(event) => this.handleSubmit(event)}>
+            <div className="form-group">
+              <span className="fas fa-search"></span>
+              <input type="search" className="search-input" aria-label="Search for a Wikipedia article..." placeholder="Search for a Wikipedia article..." onChange={(event) => this.handleChange(event)} value={this.state.searchInput} required />
             </div>
           </form>
-          <p className="text-center">...or read a <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">random Wikipedia article</a></p>
-          <div className="text-center spinner">
-            <span className="fa fa-refresh fa-spin fa-fw"></span>
-            <span className="sr-only">Loading...</span>
+          <p>...or read a <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">random Wikipedia article</a></p>
+          <div className="spinner">
+            <span className="fa fa-sync-alt fa-spin fa-2x fa-fw" aria-label="Loading..."></span>
           </div>
           <ResultsList results={this.state.searchResults} />
-          <div className="alert alert-warning text-center"><span className="fa fa-warning fa-lg fa-fw"></span>{this.state.errorMessage}</div>
+          <p className="error-message"><span className="fa fa-exclamation-triangle fa-lg fa-fw"></span>{this.state.errorMessage}</p>
         </main>
-        <footer className="text-center">Coded by <a href="../portfolio" target="_blank">Autumn Bullard</a></footer>
+        <footer>Coded by <a href="../portfolio" target="_blank">Autumn Bullard</a></footer>
       </div>
     );
   }

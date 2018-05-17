@@ -3,98 +3,119 @@
   src: url(.././fonts/linux-libertine.ttf);
 }
 
-$gray: #333;
+$dark-gray: #333;
 $white: #fff;
 $blue: #1ad1ff;
+$light-gray: #999;
 $glassy-bg: rgba(13, 13, 13, 0.2);
+$dark-yellow: #8a6d3b;
+$med-yellow: #faebcc;
+$light-yellow: #fcf8e3;
 
 $wiki-font: "Linux Libertine", serif;
 
-$desktop-view: 700px;
-
-* {
-  box-sizing: border-box;
+*:focus {
+  box-shadow: 0 0 3px 3px rgba(65, 180, 250, 0.8);
+  outline: none;
 }
 
 html {
-  height: 100%;
-  body {
-    background: $gray;
-    background: linear-gradient(120deg, #262626, #4d4d4d) fixed;
+  background: $dark-gray;
+  background: linear-gradient(120deg, #262626, #4d4d4d) fixed;
+  a,
+  a:visited,
+  a:hover,
+  a:active,
+  a:focus {
+    color: $blue;
+  }
+  h1 {
     color: $white;
-    letter-spacing: 1px;
-    min-height: 100%;
-    padding-bottom: 60px;
-    position: relative;
-    a,
-    a:visited,
-    a:hover,
-    a:active,
-    a:focus {
-      color: $blue;
+    font-family: $wiki-font;
+    font-size: 1.3rem;
+    font-variant: small-caps;
+    padding: 20px 0;
+    text-align: left;
+    @media only screen and (min-width: 700px) {
+      font-size: 1.5rem;
     }
-    header {
-      margin-bottom: 10%;
-      h1 {
-        font-family: $wiki-font;
-        font-size: 2rem;
-        font-variant: small-caps;
-        @media only screen and (min-width: $desktop-view) {
-          font-size: 2.4rem;
-        }
-      }
+  }
+  main {
+    padding-top: 10%;
+    padding-bottom: 60px;
+    p {
+      color: $white;
+    }
+    .fa-wikipedia-w {
+      color: $white;
     }
     form {
-      max-width: 500px;
-      padding: 10px;
+      padding: 20px;
       .fa-search {
-        color: $gray;
-        left: 2px;
-        top: 9px;
+        margin-top: 9px;
+        margin-left: 10px;
+        position: absolute;
       }
       .search-input {
+        background: $white;
         border-radius: 30px;
-        padding-left: 35px;
+        max-width: 500px;
+        padding: 8px 10px 8px 32px;
+        width: 100%;
+        &::placeholder {
+          color: $light-gray;
+        }
       }
     }
     .spinner {
+      color: $white;
       display: none;
-      font-size: 4.5rem;
       margin: 3%;
     }
-    .well {
-      background-color: $glassy-bg;
-      border: none;
-      border-radius: 0;
-      line-height: 22px;
-      margin-top: 20px;
-      max-width: 650px;
-      padding: 20px;
-      h2 {
-        font-family: $wiki-font;
-        font-size: 2.4rem;
-        @media only screen and (min-width: $desktop-view) {
-          font-size: 2.6rem;
+    .results {
+      margin-top: 30px;
+      article {
+        background: $glassy-bg;
+        margin: 20px auto 0;
+        max-width: 650px;
+        padding: 20px;
+        h2 {
+          color: $white;
+          font-family: $wiki-font;
+          font-size: 1.6rem;
+          letter-spacing: 3px;
+          text-align: left;
         }
-        letter-spacing: 3px;
-        margin-top: 2px;
+        p {
+          line-height: 22px;
+          margin-top: 10px;
+          text-align: left;
+        }
       }
     }
-    .alert {
+    .error-message {
+      background: $light-yellow;
+      border: 1px solid $med-yellow;
+      border-radius: 3px;
+      color: $dark-yellow;
       display: none;
-      margin: 8%;
-    }
-    footer {
-      background-color: $glassy-bg;
-      bottom: 0;
-      font-size: 1.2rem;
-      left: 0;
-      letter-spacing: 2px;
-      margin: 0;
-      padding: 12px 0;
-      position: absolute;
-      right: 0;
+      line-height: 20px;
+      margin: 12px auto;
+      max-width: 700px;
+      padding: 15px 10px;
       width: 100%;
     }
+  }
+  footer {
+    background: $glassy-bg;
+    bottom: 0;
+    color: $white;
+    font-size: 0.8rem;
+    left: 0;
+    letter-spacing: 2px;
+    padding: 14px 0;
+    position: absolute;
+    right: 0;
+    width: 100%;
   }
 }
