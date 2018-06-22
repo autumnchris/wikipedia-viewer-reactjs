@@ -48,11 +48,13 @@ export default class App extends Component {
   render() {
     return (
       <div className="body">
+        {/* HEADER */}
         <header>
           <h1>Wikipedia Viewer</h1>
         </header>
         <main>
           <div className="fab fa-wikipedia-w fa-4x"></div>
+          {/* SEARCH FORM */}
           <form role="search" onSubmit={(event) => this.handleSubmit(event)}>
             <div className="form-group">
               <span className="fas fa-search"></span>
@@ -60,12 +62,15 @@ export default class App extends Component {
             </div>
           </form>
           <p>...or read a <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">random Wikipedia article</a></p>
+          {/* LOADING SPINNER */}
           <div className="spinner">
             <span className="fa fa-sync-alt fa-spin fa-2x fa-fw" aria-label="Loading..."></span>
           </div>
+          {/* RESULTS */}
           <ResultsList results={this.state.searchResults} />
           <p className="error-message"><span className="fa fa-exclamation-triangle fa-lg fa-fw"></span>{this.state.errorMessage}</p>
         </main>
+        {/* FOOTER */}
         <footer>Coded by <a href="../portfolio" target="_blank">Autumn Bullard</a></footer>
       </div>
     );
