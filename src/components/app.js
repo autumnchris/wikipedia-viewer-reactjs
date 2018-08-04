@@ -9,7 +9,9 @@ export default class App extends Component {
     this.state = {
       searchInput: '',
       searchResults: [],
-      errorMessage: ''
+      errorMessage: '',
+      spinnerStyle: {display: 'none'},
+      errorStyle: {display: 'none'}
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -23,25 +25,30 @@ export default class App extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    document.querySelector('.spinner').style.display = 'block';
+    this.setState({
+      searchResults: [],
+      spinnerStyle: {display: 'block'},
+      errorStyle: {display: 'none'}
+    });
     axios.get(`https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${this.state.searchInput}&origin=*&format=json`)
     .then((wikiData) => {
-      this.setState({ searchResults: wikiData.data.query.search });
-      document.querySelector('.spinner').style.display = 'none';
+      this.setState({
+        searchResults: wikiData.data.query.search,
+        spinnerStyle: {display: 'none'}
+      });
 
       if (this.state.searchResults.length === 0) {
         this.setState({
-          errorMessage: ` Unable to find results for \"${this.state.searchInput}\". Consider revising your search.`
+          errorMessage: ` Unable to find results for \"${this.state.searchInput}\". Consider revising your search.`,
+          errorStyle: {display: 'block'}
         });
-        document.querySelector('.error-message').style.display = 'block';
-      }
-      else {
-        document.querySelector('.error-message').style.display = 'none';
       }
     }).catch((error) => {
-      this.setState({ errorMessage: ' Unable to load Wikipedia search results.' });
-      document.querySelector('.spinner').style.display = 'none';
-      document.querySelector('.error-message').style.display = 'block';
+      this.setState({
+        errorMessage: ' Unable to load Wikipedia search results.',
+        spinnerStyle: {display: 'none'},
+        errorStyle: {display: 'block'}
+      });
     });
   }
 
@@ -63,12 +70,12 @@ export default class App extends Component {
           </form>
           <p>...or read a <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">random Wikipedia article</a></p>
           {/* LOADING SPINNER */}
-          <div className="spinner">
+          <div className="spinner" style={this.state.spinnerStyle}>
             <span className="fa fa-sync-alt fa-spin fa-2x fa-fw" aria-label="Loading..."></span>
           </div>
           {/* RESULTS */}
           <ResultsList results={this.state.searchResults} />
-          <p className="error-message"><span className="fa fa-exclamation-triangle fa-lg fa-fw"></span>{this.state.errorMessage}</p>
+          <p className="error-message" style={this.state.errorStyle}><span className="fa fa-exclamation-triangle fa-lg fa-fw"></span>{this.state.errorMessage}</p>
         </main>
         {/* FOOTER */}
         <footer>Coded by <a href="../portfolio" target="_blank">Autumn Bullard</a></footer>
