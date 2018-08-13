@@ -75,7 +75,7 @@ export default class App extends Component {
           </div>
           {/* RESULTS */}
           <ResultsList results={this.state.searchResults} />
-          <p className="error-message" style={this.state.errorStyle}><span className="fa fa-exclamation-triangle fa-lg fa-fw"></span>{this.state.errorMessage}</p>
+          <p className="message error-message" style={this.state.errorStyle}><span className="fa fa-exclamation-circle fa-lg fa-fw"></span>{this.state.errorMessage}</p>
         </main>
         {/* FOOTER */}
         <footer>Coded by <a href="../portfolio" target="_blank">Autumn Bullard</a></footer>

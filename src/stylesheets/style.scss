@@ -8,9 +8,6 @@ $white: #fff;
 $blue: #1ad1ff;
 $light-gray: #999;
 $glassy-bg: rgba(13, 13, 13, 0.2);
-$dark-yellow: #8a6d3b;
-$med-yellow: #faebcc;
-$light-yellow: #fcf8e3;
 
 $wiki-font: "Linux Libertine", serif;
 
@@ -93,10 +90,10 @@ html {
       }
     }
     .error-message {
-      background: $light-yellow;
-      border: 1px solid $med-yellow;
+      background: hsl(349, 96%, 95%);
+      border: 1px solid hsl(349, 96%, 90%);
       border-radius: 3px;
-      color: $dark-yellow;
+      color: hsl(349, 96%, 26%);
       line-height: 20px;
       margin: 12px auto;
       max-width: 700px;
