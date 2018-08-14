@@ -16,7 +16,7 @@ My project for the [Build a Wikipedia Viewer challenge](https://learn.freecodeca
 
 ## Demo
 
-View project demo at [https://autumnchris.github.io/wikipedia-viewer-reat](https://autumnchris.github.io/wikipedia-viewer-reat).
+View project demo at [https://autumnchris.github.io/wikipedia-viewer-react](https://autumnchris.github.io/wikipedia-viewer-react).
 
 ## Installation
 
