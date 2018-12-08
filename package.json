@@ -1,7 +1,7 @@
 {
-  "name": "wikipedia-viewer-react",
+  "name": "wikipedia-viewer-reactjs",
   "version": "1.0.0",
-  "description": "My project for the Build a Wikipedia Viewer challenge as part of the curriculum for the Coding Interview Take Home Projets on Free Code Camp. Built with React.",
+  "description": "My project for the Build a Wikipedia Viewer challenge as part of the curriculum for the Coding Interview Take Home Projets on Free Code Camp. Built with React.js.",
   "main": "index.js",
   "scripts": {
     "build": "webpack -p",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/autumnchris/wikipedia-viewer-react.git"
+    "url": "git+https://github.com/autumnchris/wikipedia-viewer-reactjs.git"
   },
   "author": "autumnchris",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/autumnchris/wikipedia-viewer-react/issues"
+    "url": "https://github.com/autumnchris/wikipedia-viewer-reactjs/issues"
   },
-  "homepage": "https://autumnchris.github.io/wikipedia-viewer-react",
+  "homepage": "https://autumnchris.github.io/wikipedia-viewer-reactjs",
   "dependencies": {
     "axios": "^0.18.0",
     "babel-core": "^6.26.0",

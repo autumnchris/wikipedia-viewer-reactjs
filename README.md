@@ -1,11 +1,11 @@
-# Wikipedia Viewer (React)
+# Wikipedia Viewer (React.js)
 
-My project for the [Build a Wikipedia Viewer challenge](https://learn.freecodecamp.org/coding-interview-prep/take-home-projects/build-a-wikipedia-viewer) as part of the curriculum for Coding Interview Take Home projects on [Free Code Camp](https://www.freecodecamp.org). Built with React.
+My project for the [Build a Wikipedia Viewer challenge](https://learn.freecodecamp.org/coding-interview-prep/take-home-projects/build-a-wikipedia-viewer) as part of the curriculum for Coding Interview Take Home projects on [Free Code Camp](https://www.freecodecamp.org). Built with React.js.
 
 ---
 
 ## Built With
-* [React](https://reactjs.org)
+* [React.js](https://reactjs.org)
 * [Sass](http://sass-lang.com)
 * [Webpack](https://webpack.js.org)
 * [axios](https://github.com/axios/axios)
@@ -16,13 +16,13 @@ My project for the [Build a Wikipedia Viewer challenge](https://learn.freecodeca
 
 ## Demo
 
-View project demo at [https://autumnchris.github.io/wikipedia-viewer-react](https://autumnchris.github.io/wikipedia-viewer-react).
+View project demo at [https://autumnchris.github.io/wikipedia-viewer-reactjs](https://autumnchris.github.io/wikipedia-viewer-reactjs).
 
 ## Installation
 
 ```
-$ git clone https://github.com/autumnchris/wikipedia-viewer-react.git
-$ cd wikipedia-viewer-react
+$ git clone https://github.com/autumnchris/wikipedia-viewer-reactjs.git
+$ cd wikipedia-viewer-reactjs
 $ npm install
 $ npm start
 ```
