@@ -1,3 +1,5 @@
+@import 'variables';
+
 html,
 body,
 header,
@@ -20,8 +22,8 @@ p {
   border: 0;
   border-radius: 0;
   box-sizing: border-box;
-  color: #333;
-  font-family: Helvetica, Arial, sans-serif;
+  color: $dark-gray;
+  font-family: $main-font;
   font-size: 100%;
   font-weight: 400;
   letter-spacing: 1px;

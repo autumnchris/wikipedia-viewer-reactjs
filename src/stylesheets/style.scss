@@ -3,13 +3,8 @@
   src: url(.././fonts/linux-libertine.ttf);
 }
 
-$dark-gray: #333;
-$white: #fff;
-$blue: #1ad1ff;
-$light-gray: #999;
-$glassy-bg: rgba(13, 13, 13, 0.2);
-
-$wiki-font: "Linux Libertine", serif;
+@import 'variables';
+@import 'reset';
 
 *:focus {
   box-shadow: 0 0 3px 3px rgba(65, 180, 250, 0.8);
