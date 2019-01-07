@@ -4,8 +4,8 @@
   "description": "My project for the Build a Wikipedia Viewer challenge as part of the curriculum for the Coding Interview Take Home Projets on Free Code Camp. Built with React.js.",
   "main": "index.js",
   "scripts": {
-    "build": "webpack -p",
-    "start": "webpack-dev-server",
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --mode development --open",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,20 +20,20 @@
   "homepage": "https://autumnchris.github.io/wikipedia-viewer-reactjs",
   "dependencies": {
     "axios": "^0.18.0",
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-env": "^1.6.1",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
-    "css-loader": "^0.28.11",
-    "extract-text-webpack-plugin": "^2.0.0",
-    "file-loader": "^1.1.11",
-    "node-sass": "^4.9.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "sass-loader": "^5.0.1",
+    "css-loader": "^1.0.1",
+    "mini-css-extract-plugin": "^0.5.0",
+    "node-sass": "^4.11.0",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "sass-loader": "^7.1.0",
     "style-loader": "^0.21.0",
-    "url-loader": "^0.5.9",
-    "webpack": "^2.7.0",
-    "webpack-dev-server": "^2.11.1"
+    "url-loader": "^1.0.1",
+    "webpack": "^4.28.3",
+    "webpack-cli": "^3.2.0",
+    "webpack-dev-server": "^3.1.14"
   }
 }
