@@ -1,6 +1,6 @@
 # Wikipedia Viewer (React.js)
 
-My project for the [Build a Wikipedia Viewer challenge](https://learn.freecodecamp.org/coding-interview-prep/take-home-projects/build-a-wikipedia-viewer) as part of the curriculum for Coding Interview Take Home projects on [Free Code Camp](https://www.freecodecamp.org). Built with React.js.
+My project for the [Build a Wikipedia Viewer challenge](https://learn.freecodecamp.org/coding-interview-prep/take-home-projects/build-a-wikipedia-viewer) as part of the curriculum for Coding Interview Take Home projects on [freeCodeCamp](https://www.freecodecamp.org). Built with React.js.
 
 ---
 
