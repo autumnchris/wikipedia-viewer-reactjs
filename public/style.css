@@ -24,7 +24,7 @@ p {
   border: 0;
   border-radius: 0;
   box-sizing: border-box;
-  color: #333;
+  color: #333333;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 100%;
   font-weight: 400;
@@ -64,11 +64,11 @@ input {
   text-align: left; }
 
 *:focus {
-  box-shadow: 0 0 3px 3px rgba(65, 180, 250, 0.8);
+  box-shadow: 0 0 3px 3px rgba(66, 180, 250, 0.8);
   outline: none; }
 
 html {
-  background: #333;
+  background: #333333;
   background: linear-gradient(120deg, #262626, #4d4d4d) fixed; }
   html a,
   html a:visited,
@@ -77,7 +77,7 @@ html {
   html a:focus {
     color: #1ad1ff; }
   html h1 {
-    color: #fff;
+    color: white;
     font-family: "Linux Libertine", serif;
     font-size: 1.3rem;
     font-variant: small-caps;
@@ -90,9 +90,9 @@ html {
     padding-top: 10%;
     padding-bottom: 60px; }
     html main p {
-      color: #fff; }
+      color: white; }
     html main .fa-wikipedia-w {
-      color: #fff; }
+      color: white; }
     html main form {
       padding: 20px; }
       html main form .fa-search {
@@ -100,15 +100,15 @@ html {
         margin-left: 10px;
         position: absolute; }
       html main form .search-input {
-        background: #fff;
+        background: white;
         border-radius: 30px;
         max-width: 500px;
         padding: 8px 10px 8px 32px;
         width: 100%; }
         html main form .search-input::placeholder {
-          color: #999; }
+          color: #999999; }
     html main .spinner {
-      color: #fff;
+      color: white;
       margin: 3%; }
     html main .results {
       margin-top: 30px; }
@@ -118,7 +118,7 @@ html {
         max-width: 650px;
         padding: 20px; }
         html main .results article h2 {
-          color: #fff;
+          color: white;
           font-family: "Linux Libertine", serif;
           font-size: 1.6rem;
           letter-spacing: 3px;
@@ -140,7 +140,7 @@ html {
   html footer {
     background: rgba(13, 13, 13, 0.2);
     bottom: 0;
-    color: #fff;
+    color: white;
     font-size: 0.8rem;
     left: 0;
     letter-spacing: 2px;

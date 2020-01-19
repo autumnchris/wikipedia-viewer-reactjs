@@ -3,17 +3,17 @@
   src: url(.././fonts/linux-libertine.ttf);
 }
 
-@import 'variables';
-@import 'reset';
+@import "variables";
+@import "reset";
 
 *:focus {
-  box-shadow: 0 0 3px 3px rgba(65, 180, 250, 0.8);
+  box-shadow: 0 0 3px 3px hsla(203, 95%, 62%, 0.8);
   outline: none;
 }
 
 html {
-  background: $dark-gray;
-  background: linear-gradient(120deg, #262626, #4d4d4d) fixed;
+  background: change-color($black, $lightness: 20%);
+  background: linear-gradient(120deg, change-color($black, $lightness: 15%), change-color($black, $lightness: 30%)) fixed;
   a,
   a:visited,
   a:hover,
@@ -22,7 +22,7 @@ html {
     color: $blue;
   }
   h1 {
-    color: $white;
+    color: change-color($black, $lightness: 100%);
     font-family: $wiki-font;
     font-size: 1.3rem;
     font-variant: small-caps;
@@ -36,10 +36,10 @@ html {
     padding-top: 10%;
     padding-bottom: 60px;
     p {
-      color: $white;
+      color: change-color($black, $lightness: 100%);
     }
     .fa-wikipedia-w {
-      color: $white;
+      color: change-color($black, $lightness: 100%);
     }
     form {
       padding: 20px;
@@ -49,29 +49,29 @@ html {
         position: absolute;
       }
       .search-input {
-        background: $white;
+        background: change-color($black, $lightness: 100%);
         border-radius: 30px;
         max-width: 500px;
         padding: 8px 10px 8px 32px;
         width: 100%;
         &::placeholder {
-          color: $light-gray;
+          color: change-color($black, $lightness: 60%);
         }
       }
     }
     .spinner {
-      color: $white;
+      color: change-color($black, $lightness: 100%);
       margin: 3%;
     }
     .results {
       margin-top: 30px;
       article {
-        background: $glassy-bg;
+        background: rgba(change-color($black, $lightness: 5%), 0.2);
         margin: 20px auto 0;
         max-width: 650px;
         padding: 20px;
         h2 {
-          color: $white;
+          color: change-color($black, $lightness: 100%);
           font-family: $wiki-font;
           font-size: 1.6rem;
           letter-spacing: 3px;
@@ -85,10 +85,10 @@ html {
       }
     }
     .error-message {
-      background: hsl(349, 96%, 95%);
-      border: 1px solid hsl(349, 96%, 90%);
+      background: change-color($error-red, $lightness: 95%);
+      border: 1px solid change-color($error-red, $lightness: 90%);
       border-radius: 3px;
-      color: hsl(349, 96%, 26%);
+      color: $error-red;
       line-height: 20px;
       margin: 12px auto;
       max-width: 700px;
@@ -97,9 +97,9 @@ html {
     }
   }
   footer {
-    background: $glassy-bg;
+    background: rgba(change-color($black, $lightness: 5%), 0.2);
     bottom: 0;
-    color: $white;
+    color: change-color($black, $lightness: 100%);
     font-size: 0.8rem;
     left: 0;
     letter-spacing: 2px;
