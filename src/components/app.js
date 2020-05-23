@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ResultsList from './results-list';
+import ResultItem from './result-item';
 import axios from 'axios';
 
 export default class App extends Component {
@@ -62,19 +62,22 @@ export default class App extends Component {
         <main>
           <div className="fab fa-wikipedia-w fa-4x"></div>
           {/* SEARCH FORM */}
-          <form role="search" onSubmit={(event) => this.handleSubmit(event)}>
+          <form role="search" className="search-form" onSubmit={(event) => this.handleSubmit(event)}>
             <div className="form-group">
-              <span className="fas fa-search"></span>
-              <input type="search" className="search-input" aria-label="Search for a Wikipedia article..." placeholder="Search for a Wikipedia article..." onChange={(event) => this.handleChange(event)} value={this.state.searchInput} required />
+              <span className="fas fa-search search-icon"></span>
+              <input type="search" className="search-input" aria-label="Search Wikipedia..." placeholder="Search Wikipedia..." onChange={(event) => this.handleChange(event)} value={this.state.searchInput} autoFocus required />
+            </div>
+            <div className="button-group">
+              <input type="submit" className="button" value="Search" />
+              <a href="https://en.wikipedia.org/wiki/Special:Random" className="button" target="_blank">Random Article</a>
             </div>
           </form>
-          <p>...or read a <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">random Wikipedia article</a></p>
           {/* LOADING SPINNER */}
           <div className="spinner" style={this.state.spinnerStyle}>
             <span className="fa fa-sync-alt fa-spin fa-2x fa-fw" aria-label="Loading..."></span>
           </div>
           {/* RESULTS */}
-          <ResultsList results={this.state.searchResults} />
+          <div className="search-results">{this.state.searchResults.map((resultItem, index) => <ResultItem key={index} resultItem={resultItem} />)}</div>
           <p className="message error-message" style={this.state.errorStyle}><span className="fa fa-exclamation-circle fa-lg fa-fw"></span>{this.state.errorMessage}</p>
         </main>
         {/* FOOTER */}
