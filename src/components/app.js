@@ -45,7 +45,7 @@ export default class App extends Component {
       }
     }).catch((error) => {
       this.setState({
-        errorMessage: ' Unable to load Wikipedia search results.',
+        errorMessage: ' Unable to load Wikipedia search results at this time.',
         spinnerStyle: {display: 'none'},
         errorStyle: {display: 'block'}
       });
