@@ -8,7 +8,7 @@ My project for the [Build a Wikipedia Viewer challenge](https://learn.freecodeca
 * [React.js](https://reactjs.org)
 * [Sass](http://sass-lang.com)
 * [Webpack](https://webpack.js.org)
-* [axios](https://github.com/axios/axios)
+* [Axios](https://axios-http.com)
 * [Media Wiki API](https://www.mediawiki.org/wiki/API:Main_page)
 * [Babel](https://babeljs.io)
 * [Normalize.css](https://necolas.github.io/normalize.css)
