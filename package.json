@@ -1,7 +1,7 @@
 {
   "name": "wikipedia-viewer-reactjs",
   "version": "1.0.0",
-  "description": "My project for the Build a Wikipedia Viewer challenge as part of the curriculum for the Coding Interview Take Home Projets on freeCodeCamp. Built with React.js.",
+  "description": "A front-end web app that takes a search input and gets a list of Wikipedia search results using the Media Wiki API. Built with React.js.",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
