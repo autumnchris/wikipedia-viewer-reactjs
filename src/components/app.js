@@ -11,7 +11,6 @@ class App extends React.Component {
     this.state = {
       searchInput: '',
       searchResults: [],
-      isSubmitted: false,
       isLoading: false,
       searchError: false,
       errorMessage: ''
@@ -30,7 +29,6 @@ class App extends React.Component {
     event.preventDefault();
     this.setState({
       searchResults: [],
-      isSubmitted: true,
       isLoading: true
     });
 
@@ -50,7 +48,7 @@ class App extends React.Component {
           searchError: false,
           errorMessage: ''
         });
-        
+
         if (this.state.searchResults.length === 0) {
           this.setState({
             searchError: true,
@@ -76,8 +74,7 @@ class App extends React.Component {
         <main>
           <div className="fab fa-wikipedia-w fa-4x"></div>
           <SearchForm searchInput={this.state.searchInput} handleChange={this.handleChange} handleSubmit={this.handleSubmit} />
-          {this.state.isLoading ? <LoadingSpinner /> : null}
-          {this.state.isSubmitted && !this.state.isLoading ? <ResultsContainer searchResults={this.state.searchResults} searchError={this.state.searchError} errorMessage={this.state.errorMessage} /> : null}
+          {this.state.isLoading ? <LoadingSpinner /> : <ResultsContainer searchResults={this.state.searchResults} searchError={this.state.searchError} errorMessage={this.state.errorMessage} />}
         </main>
         <footer>Created by <a href="https://autumnbullard-portfolio.herokuapp.com" target="_blank">Autumn Bullard</a> &copy; {new Date().getFullYear()}</footer>
       </React.Fragment>
