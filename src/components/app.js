@@ -31,7 +31,7 @@ const App = () => {
   }
 
   function fetchSearchResults() {
-    axios.get(`https://en.wikipedia.org/w/api.php?action=query&list=se4arch&srsearch=${searchInput}&origin=*&format=json`)
+    axios.get(`https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${searchInput}&origin=*&format=json`)
     .then(response => {
       setLoadingStatus(false);
       renderSearchResults(response.data.query.search);
