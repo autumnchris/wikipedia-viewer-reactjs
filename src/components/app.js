@@ -20,7 +20,7 @@ const App = () => {
     setSearchResults([]);
     setLoadingStatus(true);
 
-    if (!searchInput) {
+    if (!searchInput.trim()) {
       setLoadingStatus(false);
       setSearchError(true);
       setErrorMessage('A text input must be submitted to get search results.');
