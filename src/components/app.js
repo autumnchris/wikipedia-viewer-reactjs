@@ -65,7 +65,7 @@ const App = () => {
         <SearchForm searchInput={searchInput} handleChange={handleChange} handleSubmit={handleSubmit} />
         {loadingStatus ? <LoadingSpinner /> : <ResultsContainer searchResults={searchResults} searchError={searchError} errorMessage={errorMessage} />}
       </main>
-      <footer>Created by <a href="https://autumnbullard-portfolio.herokuapp.com" target="_blank">Autumn Bullard</a> &copy; {new Date().getFullYear()}</footer>
+      <footer>Created by <a href="https://autumnchris.github.io/portfolio" target="_blank">Autumn Bullard</a> &copy; {new Date().getFullYear()}</footer>
     </React.Fragment>
   );
 }
