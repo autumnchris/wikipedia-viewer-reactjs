@@ -6,10 +6,10 @@ const SearchForm = ({ searchInput, handleChange, handleSubmit }) => {
     <form role="search" className="search-form" onSubmit={(event) => handleSubmit(event)} noValidate>
       <div className="form-group">
         <span className="fas fa-search search-icon"></span>
-        <input type="text" className="search-input" aria-label="Search Wikipedia..." placeholder="Search Wikipedia..." onChange={(event) => handleChange(event)} value={searchInput} autoFocus />
+        <input type="text" className="search-input" aria-label="Search Wikipedia..." placeholder="Search Wikipedia..." onChange={(event) => handleChange(event)} value={searchInput} required autoFocus />
       </div>
       <div className="button-group">
-        <input type="submit" className="button" value="Search" />
+        <button tyoe="submit" className="button">Search</button>
         <a href="https://en.wikipedia.org/wiki/Special:Random" className="button" target="_blank">Random Article</a>
       </div>
     </form>

@@ -63,7 +63,12 @@ footer,
 article,
 p,
 form,
-input {
+input,
+button,
+button:visited,
+button:hover,
+button:active,
+button:focus {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -127,6 +132,7 @@ textarea:focus,
   border-radius: 5px;
   color: change-color($black, $lightness: 20%);
   cursor: pointer;
+  letter-spacing: 1px;
   line-height: normal;
   margin: 0 5px;
   padding: 5px 8px;
