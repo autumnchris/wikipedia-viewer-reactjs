@@ -19,22 +19,23 @@ const App = () => {
     event.preventDefault();
     setSearchResults([]);
     setLoadingStatus(true);
+    const searchValue = searchInput.trim();
 
-    if (!searchInput.trim()) {
+    if (!searchValue) {
       setLoadingStatus(false);
       setSearchError(true);
       setErrorMessage('A text input must be submitted to get search results.');
     }
     else {
-      fetchSearchResults();
+      fetchSearchResults(searchValue);
     }
   }
 
-  function fetchSearchResults() {
-    axios.get(`https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${searchInput}&origin=*&format=json`)
+  function fetchSearchResults(searchValue) {
+    axios.get(`https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${searchValue}&origin=*&format=json`)
     .then(response => {
       setLoadingStatus(false);
-      renderSearchResults(response.data.query.search);
+      renderSearchResults(response.data.query.search, searchValue);
     }).catch(error => {
       setLoadingStatus(false);
       setSearchError(true);
@@ -42,7 +43,7 @@ const App = () => {
     });
   }
 
-  function renderSearchResults(results) {
+  function renderSearchResults(results, searchValue) {
 
     if (results.length !== 0) {
       setSearchResults(results);
@@ -51,7 +52,7 @@ const App = () => {
     }
     else {
       setSearchError(true);
-      setErrorMessage(`Unable to find results for \"${searchInput}\". Consider revising your search.`);
+      setErrorMessage(`Unable to find results for \"${searchValue}\". Consider revising your search.`);
     }
   }
 
