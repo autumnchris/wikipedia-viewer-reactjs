@@ -1,0 +1,133 @@
+// STYLES FOR PAGE'S MAIN CONTENT
+
+// Button styles
+.button-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.button,
+.button:visited,
+.button:hover,
+.button:active,
+.button:focus {
+  background: $blue;
+  border: 2px solid $blue;
+  border-radius: 5px;
+  color: change-color($black, $lightness: 20%);
+  cursor: pointer;
+  letter-spacing: 1px;
+  line-height: normal;
+  margin: 0 5px;
+  padding: 5px 8px;
+  width: auto;
+  &:hover {
+    background: transparent;
+    color: $blue;
+    text-decoration: none;
+  }
+}
+
+// Form styles
+input {
+  border: 0;
+  border-radius: 0;
+  color: change-color($black, $lightness: 20%);
+  letter-spacing: 1px;
+  line-height: 1.3;
+  padding: 10px;
+  width: 100%;
+  &::-webkit-input-placeholder {
+    color: change-color($black, $lightness: 60%);
+  }
+  &::-moz-placeholder {
+    color: change-color($black, $lightness: 60%);
+  }
+  &:-ms-input-placeholder {
+    color: change-color($black, $lightness: 60%);
+  }
+  &::-ms-input-placeholder {
+    color: change-color($black, $lightness: 60%);
+  }
+  &::placeholder {
+    color: change-color($black, $lightness: 60%);
+  }
+}
+
+.search-form {
+  padding: 20px;
+  .form-group {
+    margin: 0 auto;
+    max-width: 500px;
+    position: relative;
+    .search-icon {
+      color: change-color($black, $lightness: 20%);
+      left: 10px;
+      position: absolute;
+      top: 12px;
+    }
+    .search-input {
+      border-radius: 30px;
+      padding-left: 35px;
+    }
+  }
+  .button-group {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-top: 15px;
+  }
+}
+
+// Search results styles
+.search-results .result-item {
+  background: rgba(change-color($black, $lightness: 5%), 0.2);
+  margin: 20px auto 0;
+  max-width: 650px;
+  padding: 20px;
+  text-align: left;
+  h2 {
+    font-family: $wiki-font;
+    font-size: 1.6rem;
+    letter-spacing: 3px;
+  }
+  p {
+    line-height: 1.35;
+    padding-bottom: 10px;
+  }
+}
+
+// Loading spinner styles
+.loading-spinner {
+  -webkit-animation: spin 0.75s linear infinite;
+  animation: spin 0.75s linear infinite;
+  border: 4px solid $blue;
+  border-top: 4px solid transparent;
+  border-radius: 50%;
+  height: 30px;
+  margin: 3% auto;
+  width: 30px;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
