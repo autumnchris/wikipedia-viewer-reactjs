@@ -5,7 +5,7 @@ const SearchForm = ({ searchInput, handleChange, handleSubmit }) => {
   return (
     <form role="search" className="search-form" onSubmit={(event) => handleSubmit(event)} noValidate>
       <div className="form-group">
-        <span className="fas fa-search search-icon"></span>
+        <span className="fas fa-search search-icon" aria-hidden="true"></span>
         <input type="text" className="search-input" aria-label="Search Wikipedia..." placeholder="Search Wikipedia..." onChange={(event) => handleChange(event)} value={searchInput} required autoFocus />
       </div>
       <div className="button-group">
