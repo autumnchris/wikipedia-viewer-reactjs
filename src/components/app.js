@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import SearchForm from './search-form';
-import LoadingSpinner from './loading-spinner';
-import ResultsContainer from './results-container';
+import SearchForm from './Search-Form';
+import LoadingSpinner from './Loading-Spinner';
+import ResultsContainer from './Results-Container';
 import axios from 'axios';
 
 const App = () => {
