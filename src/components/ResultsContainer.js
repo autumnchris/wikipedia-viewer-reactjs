@@ -1,6 +1,6 @@
 import React from 'react';
-import ErrorMessage from './Error-Message';
-import ResultItem from './Result-Item';
+import ErrorMessage from './ErrorMessage';
+import ResultItem from './ResultItem';
 
 const ResultsContainer = ({ searchResults, searchError, errorMessage }) => {
 
