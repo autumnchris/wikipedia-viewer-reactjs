@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import SearchForm from './SearchForm';
 import LoadingSpinner from './LoadingSpinner';
 import ResultsContainer from './ResultsContainer';
-import axios from 'axios';
+import ErrorMessage from './ErrorMessage';
 
 const App = () => {
   const [searchInput, setSearchInput] = useState('');
   const [searchResults, setSearchResults] = useState([]);
   const [loadingStatus, setLoadingStatus] = useState(false);
-  const [searchError, setSearchError] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
 
   function handleChange(event) {
@@ -23,7 +23,6 @@ const App = () => {
 
     if (!searchValue) {
       setLoadingStatus(false);
-      setSearchError(true);
       setErrorMessage('A text input must be submitted to get search results.');
     }
     else {
@@ -38,7 +37,6 @@ const App = () => {
       renderSearchResults(response.data.query.search, searchValue);
     }).catch(error => {
       setLoadingStatus(false);
-      setSearchError(true);
       setErrorMessage('Unable to load Wikipedia search results at this time.');
     });
   }
@@ -47,11 +45,9 @@ const App = () => {
 
     if (results.length !== 0) {
       setSearchResults(results);
-      setSearchError(false);
       setErrorMessage('');
     }
     else {
-      setSearchError(true);
       setErrorMessage(`Unable to find results for \"${searchValue}\". Consider revising your search.`);
     }
   }
@@ -64,7 +60,7 @@ const App = () => {
       <main>
         <div className="fab fa-wikipedia-w fa-4x"></div>
         <SearchForm searchInput={searchInput} handleChange={handleChange} handleSubmit={handleSubmit} />
-        {loadingStatus ? <LoadingSpinner /> : <ResultsContainer searchResults={searchResults} searchError={searchError} errorMessage={errorMessage} />}
+        {loadingStatus && searchResults.length === 0 ? <LoadingSpinner /> : errorMessage && searchResults.length === 0 ? <ErrorMessage errorMessage={errorMessage} /> : <ResultsContainer searchResults={searchResults} />}
       </main>
       <footer>Created by <a href="https://autumnchris.github.io/portfolio" target="_blank">Autumn Bullard</a> &copy; {new Date().getFullYear()}</footer>
     </React.Fragment>
