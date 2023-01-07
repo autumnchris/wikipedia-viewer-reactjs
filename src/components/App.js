@@ -60,7 +60,7 @@ const App = () => {
       <main>
         <div className="fab fa-wikipedia-w fa-4x"></div>
         <SearchForm searchInput={searchInput} handleChange={handleChange} handleSubmit={handleSubmit} />
-        {loadingStatus && searchResults.length === 0 ? <LoadingSpinner /> : errorMessage && searchResults.length === 0 ? <ErrorMessage errorMessage={errorMessage} /> : <ResultsContainer searchResults={searchResults} />}
+        {loadingStatus ? <LoadingSpinner /> : errorMessage ? <ErrorMessage errorMessage={errorMessage} /> : <ResultsContainer searchResults={searchResults} />}
       </main>
       <footer>Created by <a href="https://autumnchris.github.io/portfolio" target="_blank">Autumn Bullard</a> &copy; {new Date().getFullYear()}</footer>
     </React.Fragment>
