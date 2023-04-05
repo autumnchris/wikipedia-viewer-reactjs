@@ -1,6 +1,49 @@
-import React from 'react';
+import React, { useState } from 'react';
+import axios from 'axios';
 
-const SearchForm = ({ searchInput, handleChange, handleSubmit }) => {
+const SearchForm = ({ setLoadingStatus, setErrorMessage, setSearchResults }) => {
+  const [searchInput, setSearchInput] = useState('');
+
+  function handleChange(event) {
+    setSearchInput(event.target.value);
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    setSearchResults([]);
+    setLoadingStatus(true);
+    const searchValue = searchInput.trim();
+
+    if (!searchValue) {
+      setLoadingStatus(false);
+      setErrorMessage('A text input must be submitted to get search results.');
+    }
+    else {
+      fetchSearchResults(searchValue);
+    }
+  }
+
+  function fetchSearchResults(searchValue) {
+    axios.get(`https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${searchValue}&origin=*&format=json`)
+    .then(response => {
+      setLoadingStatus(false);
+      renderSearchResults(response.data.query.search, searchValue);
+    }).catch(error => {
+      setLoadingStatus(false);
+      setErrorMessage('Unable to load Wikipedia search results at this time.');
+    });
+  }
+
+  function renderSearchResults(results, searchValue) {
+
+    if (results.length !== 0) {
+      setSearchResults(results);
+      setErrorMessage('');
+    }
+    else {
+      setErrorMessage(`Unable to find results for \"${searchValue}\". Consider revising your search.`);
+    }
+  }
 
   return (
     <form role="search" className="search-form" onSubmit={(event) => handleSubmit(event)} noValidate>
