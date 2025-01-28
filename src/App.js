@@ -15,7 +15,7 @@ const App = () => {
     <React.Fragment>
       <Header />
       <main>
-        <div className="fab fa-wikipedia-w fa-4x"></div>
+        <div className="fab fa-wikipedia-w fa-4x" aria-hidden="true"></div>
         <SearchForm setLoadingStatus={setLoadingStatus} setErrorMessage={setErrorMessage} setSearchResults={setSearchResults} />
         {loadingStatus ? <LoadingSpinner /> : errorMessage ? <ErrorMessage errorMessage={errorMessage} /> : <ResultsContainer searchResults={searchResults} />}
       </main>
