@@ -53,7 +53,7 @@ const SearchForm = ({ setLoadingStatus, setErrorMessage, setSearchResults }) => 
       </div>
       <div className="button-group">
         <button type="submit" className="button">Search</button>
-        <a href="https://en.wikipedia.org/wiki/Special:Random" className="button" target="_blank">Random Article <span className="fa-solid fa-arrow-up-right-from-square"></span></a>
+        <a href="https://en.wikipedia.org/wiki/Special:Random" className="button" target="_blank">Random Article <span className="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></span></a>
       </div>
     </form>
   );
