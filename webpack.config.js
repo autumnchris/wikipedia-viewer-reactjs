@@ -32,8 +32,11 @@ module.exports = {
         ]
       },
       {
-        test: /\.(ttf|otf|woff)$/,
-        type: 'asset'
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        loader: "file-loader",
+        options: {
+          outputPath: "assets/fonts",
+        }
       }
     ]
   },
