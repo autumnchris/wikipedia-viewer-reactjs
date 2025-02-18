@@ -77,6 +77,12 @@ input {
     -ms-flex-pack: center;
     justify-content: center;
     padding-top: 15px;
+    .button[type=submit],
+    .button[type=submit]:hover,
+    .button[type=submit]:active,
+    .button[type=submit]:focus {
+      font-weight: 400;
+    }
   }
 }
 
