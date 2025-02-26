@@ -49,7 +49,7 @@ const SearchForm = ({ setLoadingStatus, setErrorMessage, setSearchResults }) => 
     <form role="search" className="search-form" onSubmit={(event) => handleSubmit(event)} noValidate>
       <div className="form-group">
         <span className="fa-solid fa-magnifying-glass search-icon" aria-hidden="true"></span>
-        <input type="text" name="searchInput" className="search-input" aria-label="Search Wikipedia..." placeholder="Search Wikipedia..." onChange={(event) => handleChange(event)} value={searchInput} id="search-input" autoComplete="off" required autoFocus />
+        <input type="text" name="searchInput" className="search-input" aria-label="Search Wikipedia..." placeholder="Search Wikipedia..." onChange={(event) => handleChange(event)} value={searchInput} id="search-input" autoComplete="off" autoCapitalize="off" required autoFocus />
       </div>
       <div className="button-group">
         <button type="submit" className="button">Search</button>
